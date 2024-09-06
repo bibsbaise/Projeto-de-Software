@@ -8,7 +8,7 @@ e categoria.
 Descrição do Caso de Uso 2: FORNECER DESCONTOS
 - Ator: Atendente
 - Descrição: O atendente da loja poderá acessar o sistema para fornecer descontos aos clientes de acordo com o valor de sua compra.
-- Regra de Negócio: Descontos podem ser aplicados em faixas específicas de valor de compra, e há um limite máximo de desconto que pode ser autorizado sem validação de um superior.
+- Regra de Negócio: Descontos podem ser aplicados em faixas específicas de valor de compra, e há um limite máximo de desconto que pode ser autorizado sem validação do gerente.
 - Extensão: Pode estar relacionado ao caso de uso "Processar Transações de Vendas".
 
 
@@ -41,7 +41,7 @@ realizar a reposição.
 Descrição do Caso de Uso 7: ACOMPANHAR HISTÓRICO DE COMPRAS
 - Ator: Atendente
 - Descrição: O atendente da loja poderá acompanhar no sistema o histórico de compras dos clientes, visualizando produtos adquiridos, datas de compra e valores.
-- Regra de Negócio: O sistema deve permitir filtros por data, tipo de produto ou valor gasto para facilitar a busca de informações.
+- Regra de Negócio: O sistema deve permitir filtros por data, tipo de produto ou valor gasto para facilitar a busca de informações e a identificação de preferências.
 
 
 Descrição do Caso de Uso 8: PROCESSAR TRANSAÇÕES DE VENDAS
@@ -55,7 +55,7 @@ Descrição do Caso de Uso 9: EMITIR RECIBOS
 - Ator: Vendedor
 - Descrição: O vendedor poderá emitir recibos para os clientes no sistema após a finalização de uma venda.
 - Regra de Negócio: Os recibos podem ser gerados em formato digital ou impresso, conforme solicitação do cliente.
-- Extensão: Este caso de uso é uma extensão de "Processar Transações de Vendas".
+- Extensão: Este caso de uso é uma extensão do caso de uso 8 "Processar Transações de Vendas".
 
 
 Descrição do Caso de Uso 10: ACESSAR RELATÓRIOS DE DESEMPENHO
