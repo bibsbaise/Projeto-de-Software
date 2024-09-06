@@ -1,0 +1,30 @@
+Descrição do caso de uso 1: REGISTRAR PRODUTOS
+  - O responsável pelo estoque utilizará o sistema para registrar todos os produtos da loja, sejam antigos ou lançamentos.
+
+Descrição do caso de uso 2: FORNECER DESCONTOS
+  - O atendente da loja poderá acessar o sistema para fornecer descontos aos clientes de acordo com o valor de sua compra.
+
+Descrição do caso de uso 3: REGISTRAR VENDAS
+  - O vendedor da loja poderá registrar quantos produtos vende por dia no sistema para receber uma comissão sob essa quantidade ao fim de cada mês.
+
+Descrição do caso de uso 4: CADASTRAR ESTOQUE
+  - O responsável pelo estoque poderá cadastrar no sistema todos os produtos disponíveis no estoque da loja e suas quantidades.
+
+Descrição do caso de uso 5: CADASTRAR QUANTIDADE MÍNIMA
+  - O responsável pelo estoque poderá cadastrar no sistema uma quantidade mínima que cada produto deve ter. Por exemplo, deve haver pelo menos 5 fones de ouvido no estoque.
+
+Descrição de caso de uso 6: EMITIR ALERTA
+  - O sistema deverá emitir uma mensagem de alerta na tela caso um produto esteja com uma quantidade menor do que o mínimo necessário, para que o responsável pelo estoque possa realizar a 
+reposição. Por exemplo, se houver 4 fones de ouvido no estoque, uma mensagem informando isso deverá ser emitida na tela.
+
+Descrição de caso de uso 7: ACOMPANHAR HISTÓRICO DE COMPRAS
+  - O atendente da loja poderá acompanhar no sistema o histórico de compras dos clientes.
+
+Descrição de caso de uso 8: PROCESSAR TRANSAÇÕES DE VENDAS
+  - O vendedor poderá processar as transações de venda no sistema.
+
+Descrição de caso de uso 9: EMITIR RECIBOS
+  - O vendedor poderá emitir recibos para a loja no sistema.
+
+Descrição de caso de uso 10: ACESSAR RELATÓRIOS DE DESEMPENHO
+  - O gerente da loja poderá ter acesso a relatórios de desempenho no sistema para fornecer bônus aos funcionários.
