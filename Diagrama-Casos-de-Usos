@@ -1,77 +1,78 @@
 Descrição do Caso de Uso 0: LOGAR NO SISTEMA
-Ator: Todos os atores (exceto o sistema)
-Descrição: Antes de acessar qualquer funcionalidade do sistema, o ator deverá se autenticar inserindo suas credenciais.
-Regra de Negócio: O sistema deve validar o nome de usuário e senha, e permitir o acesso apenas após a autenticação bem-sucedida. Perfis de acesso podem ser diferenciados com base no papel
-do usuário (responsável pelo estoque, atendente, vendedor, gerente).
+  - Ator: Todos os atores (exceto o sistema)
+  - Descrição: Antes de acessar qualquer funcionalidade do sistema, o ator deverá se autenticar inserindo suas credenciais.
+  - Regra de Negócio: O sistema deve validar o nome de usuário e senha, e permitir o acesso apenas após a autenticação bem-sucedida. Perfis de acesso podem ser diferenciados com base no papel
+  do usuário (responsável pelo estoque, atendente, vendedor, gerente).
 
 Descrição do Caso de Uso 1: REGISTRAR PRODUTOS
-- Ator: Responsável pelo estoque
-- Descrição: O responsável pelo estoque utilizará o sistema para registrar todos os produtos da loja, sejam antigos ou lançamentos, inserindo informações como nome, descrição, preço 
-e categoria.
-- Regra de Negócio: O sistema deve permitir categorizar produtos como novos ou antigos e garantir que não haja duplicação de cadastros.
-- Includes: Logar no Sistema
+  - Ator: Responsável pelo estoque
+  - Descrição: O responsável pelo estoque utilizará o sistema para registrar todos os produtos da loja, sejam antigos ou lançamentos, inserindo informações como nome, descrição, preço 
+  e categoria.
+  - Regra de Negócio: O sistema deve permitir categorizar produtos como novos ou antigos e garantir que não haja duplicação de cadastros.
+  - Includes: Logar no Sistema
 
 
 Descrição do Caso de Uso 2: FORNECER DESCONTOS
-- Ator: Atendente
-- Descrição: O atendente da loja poderá acessar o sistema para fornecer descontos aos clientes de acordo com o valor de sua compra.
-- Regra de Negócio: Descontos podem ser aplicados em faixas específicas de valor de compra, e há um limite máximo de desconto que pode ser autorizado sem validação do gerente.
-- Extensão: Pode estar relacionado ao caso de uso "Processar Transações de Vendas".
-- Includes: Logar no Sistema
+  - Ator: Atendente
+  - Descrição: O atendente da loja poderá acessar o sistema para fornecer descontos aos clientes de acordo com o valor de sua compra.
+  - Regra de Negócio: Descontos podem ser aplicados em faixas específicas de valor de compra, e há um limite máximo de desconto que pode ser autorizado sem validação do gerente.
+  - Extensão: Pode estar relacionado ao caso de uso "Processar Transações de Vendas".
+  - Includes: Logar no Sistema
 
 
 Descrição do Caso de Uso 3: REGISTRAR VENDAS
-- Ator: Vendedor
-- Descrição: O vendedor da loja poderá registrar no sistema quantos produtos vende por dia para que sua comissão mensal seja calculada com base nessas vendas.
-- Regra de Negócio: As vendas registradas devem ser validadas ao final de cada dia, e o sistema calcula a comissão com base em uma porcentagem predefinida.
-- Includes: Logar no Sistema
+  - Ator: Vendedor
+  - Descrição: O vendedor da loja poderá registrar no sistema quantos produtos vende por dia para que sua comissão mensal seja calculada com base nessas vendas.
+  - Regra de Negócio: As vendas registradas devem ser validadas ao final de cada dia, e o sistema calcula a comissão com base em uma porcentagem predefinida.
+  - Includes: Logar no Sistema
 
 
 Descrição do Caso de Uso 4: CADASTRAR ESTOQUE
-- Ator: Responsável pelo estoque
-- Descrição: O responsável pelo estoque poderá cadastrar no sistema todos os produtos disponíveis na loja e suas respectivas quantidades.
-- Regra de Negócio: O sistema deve permitir atualizar as quantidades conforme novas entregas ou saídas de produtos ocorram, garantindo a precisão dos registros.
-- Includes: Logar no Sistema
+  - Ator: Responsável pelo estoque
+  - Descrição: O responsável pelo estoque poderá cadastrar no sistema todos os produtos disponíveis na loja e suas respectivas quantidades.
+  - Regra de Negócio: O sistema deve permitir atualizar as quantidades conforme novas entregas ou saídas de produtos ocorram, garantindo a precisão dos registros.
+  - Includes: Logar no Sistema
 
 
 Descrição do Caso de Uso 5: CADASTRAR QUANTIDADE MÍNIMA
-- Ator: Responsável pelo estoque
-- Descrição: O responsável pelo estoque poderá cadastrar no sistema a quantidade mínima que cada produto deve ter no estoque. Por exemplo: deve haver pelo menos 5 fones de ouvido no 
-estoque.
-- Regra de Negócio: O sistema deve emitir um alerta caso a quantidade de um produto caia abaixo da quantidade mínima cadastrada.
-- Includes: Logar no Sistema
+  - Ator: Responsável pelo estoque
+  - Descrição: O responsável pelo estoque poderá cadastrar no sistema a quantidade mínima que cada produto deve ter no estoque. Por exemplo: deve haver pelo menos 5 fones de ouvido no 
+  estoque.
+  - Regra de Negócio: O sistema deve emitir um alerta caso a quantidade de um produto caia abaixo da quantidade mínima cadastrada.
+  - Includes: Logar no Sistema
 
 
 Descrição do Caso de Uso 6: EMITIR ALERTA
-- Ator: Sistema
-- Descrição: O sistema deverá emitir uma mensagem de alerta na tela caso um produto esteja com uma quantidade menor do que o mínimo necessário, para que o responsável pelo estoque possa 
-realizar a reposição.
-- Regra de Negócio: Os alertas são disparados automaticamente e podem ser configurados para enviar notificações por e-mail ou SMS.
+  - Ator: Sistema
+  - Descrição: O sistema deverá emitir uma mensagem de alerta na tela caso um produto esteja com uma quantidade menor do que o mínimo necessário, para que o responsável pelo estoque possa 
+  realizar a reposição.
+  - Regra de Negócio: Os alertas são disparados automaticamente e podem ser configurados para enviar notificações por e-mail ou SMS.
 
 
 Descrição do Caso de Uso 7: ACOMPANHAR HISTÓRICO DE COMPRAS
-- Ator: Atendente
-- Descrição: O atendente da loja poderá acompanhar no sistema o histórico de compras dos clientes, visualizando produtos adquiridos, datas de compra e valores.
-- Regra de Negócio: O sistema deve permitir filtros por data, tipo de produto ou valor gasto para facilitar a busca de informações e a identificação de preferências.
-- Includes: Logar no Sistema
+  - Ator: Atendente
+  - Descrição: O atendente da loja poderá acompanhar no sistema o histórico de compras dos clientes, visualizando produtos adquiridos, datas de compra e valores.
+  - Regra de Negócio: O sistema deve permitir filtros por data, tipo de produto ou valor gasto para facilitar a busca de informações e a identificação de preferências.
+  - Includes: Logar no Sistema
 
 
 Descrição do Caso de Uso 8: PROCESSAR TRANSAÇÕES DE VENDAS
-- Ator: Vendedor
-- Descrição: O vendedor poderá processar as transações de venda no sistema, incluindo os produtos vendidos, valores e métodos de pagamento.
-- Regra de Negócio: O sistema deve validar a disponibilidade de estoque antes de concluir a venda e atualizar automaticamente a quantidade de produtos no estoque.
-- Includes: Logar no Sistema
+  - Ator: Vendedor
+  - Descrição: O vendedor poderá processar as transações de venda no sistema, incluindo os produtos vendidos, valores e métodos de pagamento.
+  - Regra de Negócio: O sistema deve validar a disponibilidade de estoque antes de concluir a venda e atualizar automaticamente a quantidade de produtos no estoque.
+  - Includes: Logar no Sistema
 
 
 Descrição do Caso de Uso 9: EMITIR RECIBOS
-- Ator: Vendedor
-- Descrição: O vendedor poderá emitir recibos para os clientes no sistema após a finalização de uma venda.
-- Regra de Negócio: Os recibos podem ser gerados em formato digital ou impresso, conforme solicitação do cliente.
-- Extensão: Este caso de uso é uma extensão do caso de uso 8 "Processar Transações de Vendas".
-- Includes: Logar no Sistema
+  - Ator: Vendedor
+  - Descrição: O vendedor poderá emitir recibos para os clientes no sistema após a finalização de uma venda.
+  - Regra de Negócio: Os recibos podem ser gerados em formato digital ou impresso, conforme solicitação do cliente.
+  - Extensão: Este caso de uso é uma extensão do caso de uso 8 "Processar Transações de Vendas".
+  - Includes: Logar no Sistema
 
 
 Descrição do Caso de Uso 10: ACESSAR RELATÓRIOS DE DESEMPENHO
-- Ator: Gerente
-- Descrição: O gerente da loja poderá acessar relatórios de desempenho no sistema para avaliar as vendas realizadas e fornecer bônus aos funcionários com base em suas metas atingidas.
-- Regra de Negócio: O sistema deve oferecer relatórios detalhados por vendedor, período de tempo e categorias de produtos vendidos.
+  - Ator: Gerente
+  - Descrição: O gerente da loja poderá acessar relatórios de desempenho no sistema para avaliar as vendas realizadas e fornecer bônus aos funcionários com base em suas metas atingidas.
+  - Regra de Negócio: O sistema deve oferecer relatórios detalhados por vendedor, período de tempo e categorias de produtos vendidos.
+  - Includes: Logar no Sistema
