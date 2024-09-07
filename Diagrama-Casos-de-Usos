@@ -33,6 +33,7 @@ Descrição do Caso de Uso 4: CADASTRAR ESTOQUE
   - Ator: Responsável pelo estoque
   - Descrição: O responsável pelo estoque poderá cadastrar no sistema todos os produtos disponíveis na loja e suas respectivas quantidades.
   - Regra de Negócio: O sistema deve permitir atualizar as quantidades conforme novas entregas ou saídas de produtos ocorram, garantindo a precisão dos registros.
+  - Extends: Registrar Vendas
   - Includes: Logar no Sistema
 
 
