@@ -1,3 +1,9 @@
+Descrição do Caso de Uso 0: LOGAR NO SISTEMA
+Ator: Todos os atores (exceto o sistema)
+Descrição: Antes de acessar qualquer funcionalidade do sistema, o ator deverá se autenticar inserindo suas credenciais.
+Regra de Negócio: O sistema deve validar o nome de usuário e senha, e permitir o acesso apenas após a autenticação bem-sucedida. Perfis de acesso podem ser diferenciados com base no papel
+do usuário (responsável pelo estoque, atendente, vendedor, gerente).
+
 Descrição do Caso de Uso 1: REGISTRAR PRODUTOS
 - Ator: Responsável pelo estoque
 - Descrição: O responsável pelo estoque utilizará o sistema para registrar todos os produtos da loja, sejam antigos ou lançamentos, inserindo informações como nome, descrição, preço 
