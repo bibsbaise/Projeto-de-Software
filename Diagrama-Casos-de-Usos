@@ -16,14 +16,16 @@ Descrição do Caso de Uso 2: FORNECER DESCONTOS
   - Ator: Atendente
   - Descrição: O atendente da loja poderá acessar o sistema para fornecer descontos aos clientes de acordo com o valor de sua compra.
   - Regra de Negócio: Descontos podem ser aplicados em faixas específicas de valor de compra, e há um limite máximo de desconto que pode ser autorizado sem validação do gerente.
-  - Extensão: Pode estar relacionado ao caso de uso "Processar Transações de Vendas".
+  - Extends: É uma extensão do caso 12 'APROVAR DESCONTOS'
   - Includes: Logar no Sistema
 
 
 Descrição do Caso de Uso 3: REGISTRAR VENDAS
   - Ator: Vendedor
-  - Descrição: O vendedor da loja poderá registrar no sistema quantos produtos vende por dia para que sua comissão mensal seja calculada com base nessas vendas.
-  - Regra de Negócio: As vendas registradas devem ser validadas ao final de cada dia, e o sistema calcula a comissão com base em uma porcentagem predefinida.
+  - Descrição: O vendedor da loja poderá registrar no sistema quantos produtos vende por dia para que sua comissão mensal seja calculada com base nessas vendas, e também para atualizar
+o estoque.
+  - Regra de Negócio: As vendas registradas devem ser validadas ao final de cada dia, e o sistema calcula a comissão com base em uma porcentagem predefinida. A quantidade no estoque deve
+ser atualizada imediatamente após o registro.
   - Includes: Logar no Sistema
 
 
@@ -67,7 +69,7 @@ Descrição do Caso de Uso 9: EMITIR RECIBOS
   - Ator: Vendedor
   - Descrição: O vendedor poderá emitir recibos para os clientes no sistema após a finalização de uma venda.
   - Regra de Negócio: Os recibos podem ser gerados em formato digital ou impresso, conforme solicitação do cliente.
-  - Extensão: Este caso de uso é uma extensão do caso de uso 8 "Processar Transações de Vendas".
+  - Extends: Este caso de uso é uma extensão do caso de uso 8 "Processar Transações de Vendas".
   - Includes: Logar no Sistema
 
 
@@ -76,3 +78,35 @@ Descrição do Caso de Uso 10: ACESSAR RELATÓRIOS DE DESEMPENHO
   - Descrição: O gerente da loja poderá acessar relatórios de desempenho no sistema para avaliar as vendas realizadas e fornecer bônus aos funcionários com base em suas metas atingidas.
   - Regra de Negócio: O sistema deve oferecer relatórios detalhados por vendedor, período de tempo e categorias de produtos vendidos.
   - Includes: Logar no Sistema
+
+Descrição do Caso de Uso 11: CADASTRAR CLIENTES
+  - Ator: Atendente
+  - Descrição: O atendente utilizará o sistema para cadastrar novos clientes, inserindo informações pessoais como nome, endereço, e formas de contato. Esse cadastro permitirá ao sistema
+manter o histórico de compras e possibilitar futuras interações, como descontos e promoções.
+  - Regra de Negócio: O sistema deve garantir que cada cliente tenha um identificador único (por exemplo, CPF ou e-mail) e que os campos obrigatórios sejam preenchidos corretamente antes
+de confirmar o cadastro. Além disso, dados sensíveis devem ser armazenados de forma segura, de acordo com as normas de proteção de dados (LGPD).
+  - Includes: Logar no Sistema
+
+Descrição do Caso de Uso 12: APROVAR DESCONTOS
+  - Ator: Gerente
+  - Descrição: O gerente pode acessar o sistema para revisar e aprovar descontos propostos pelos atendentes ou vendedores, de acordo com as políticas da loja. O gerente poderá ajustar o 
+valor do desconto ou rejeitar a solicitação.
+  - Regra de Negócio: O sistema deve registrar o histórico das aprovações e rejeições de descontos, vinculando essas ações ao gerente responsável. Descontos acima de um determinado limite
+exigem a aprovação do gerente, conforme as regras internas da empresa.
+  - Includes: Logar no Sistema
+
+Descrição do Caso de Uso 13: CRIAR RELATÓRIOS DE DESEMPENHO
+  - Ator: Sistema
+  - Descrição: O sistema deve gerar relatórios automáticos de desempenho mensal dos funcionários, baseados em dados como vendas, comissões e metas atingidas. Esses relatórios serão 
+disponibilizados ao gerente para tomada de decisão sobre bônus e incentivos.
+  - Regra de Negócio: O sistema deve consolidar as informações em formato de relatório ao final de cada mês, garantindo precisão nos dados e facilitando a análise. O relatório deve ser
+visualizado apenas pelo gerente, e deve ser arquivado por um período mínimo, conforme as políticas da empresa.
+
+Descrição do Caso de Uso 14: CALCULAR COMISSÃO DE VENDAS
+  - Ator: Sistema
+  - Descrição: O sistema deverá calcular automaticamente a comissão do vendedor com base nas vendas registradas ao longo de um período (geralmente um mês). A comissão será calculada conforme
+  as regras de comissionamento da loja, que podem variar de acordo com o tipo de produto ou valor total de vendas.
+  - Regra de Negócio: A comissão será um percentual fixo ou variável, conforme a política da empresa. O sistema deverá considerar apenas vendas confirmadas e calcular a comissão acumulada,
+  permitindo ao gerente acessar esses valores para fornecer bonificações no final do período.
+  - Includes: Registrar Vendas
+  - Extends: Gerar Relatórios de Desempenho
